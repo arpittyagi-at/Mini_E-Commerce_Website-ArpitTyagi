@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arpit's Mini Store</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <h1>Arpit's Mini Store</h1>
+      <p class="sub">Simple demo store — Created by Arpit Tyagi</p>
+    </div>
+    <nav>
+      <button id="btnHome" class="nav-btn">Products</button>
+      <button id="btnCart" class="nav-btn">Cart (<span id="cartCount">0</span>)</button>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section id="productsSection" class="grid"></section>
+
+    <section id="cartSection" class="panel hidden">
+      <h2>Your Cart</h2>
+      <div id="cartList"></div>
+      <div class="cart-footer">
+        <div>Total: ₹<span id="cartTotal">0</span></div>
+        <div>
+          <button id="clearCart" class="btn danger">Clear Cart</button>
+          <button id="checkout" class="btn">Checkout</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-card">
+      <button id="closeModal" class="close">✕</button>
+      <img id="modalImg" alt="" />
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <p><strong>Price:</strong> ₹<span id="modalPrice"></span></p>
+      <div class="modal-actions">
+        <label>Qty:
+          <input id="modalQty" type="number" min="1" value="1" />
+        </label>
+        <button id="modalAdd" class="btn">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    Created by <strong>Arpit Tyagi</strong>
+  </footer>
+
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
